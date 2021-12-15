@@ -93,3 +93,17 @@ p {
     font-family: Quick;
     color: rgb(29, 29, 29);
 }
+
+
+/* Pagina Principal */
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 9fr 3fr;
+    height: 90px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
