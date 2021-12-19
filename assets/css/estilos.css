@@ -12,7 +12,7 @@ body .form-login {
     font-family: Quick;
     margin: 0;
     background-color: transparent;
-    background-image: url('/img/login-fondo1.jpg');
+    background-image: url('/assets/img/bg_index.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

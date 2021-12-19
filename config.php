@@ -1,6 +1,7 @@
 <?php
 /*Ruta principla de la aplicacion*/ 
 define('APP_URL','http://localhost/ProyectoBootCamp/');
+define('DEFAULT_PAGE','pages/inicio.php');
 
 /*CONFIGURACION DE CONEXION A LA BASE DE DATOS */
 define('DB_HOST','localhost');
