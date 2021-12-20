@@ -39,10 +39,19 @@ class Articulo extends Modelo {
 
     /* Guarda un registro en la base de datos*/
     public function insert($data){
+        /*
         $consulta = "INSERT INTO $this->nombre_tabla (usu_id, cat_id, art_titulo, art_resumen, art_detalle, art_foto) 
         VALUES ('".$data['usu_id']."','".$data['cat_id']."','".$data['art_titulo']."','".$data['art_resumen']."','".$data['art_detalle']."','".$data['art_foto']."');";
         $resultado = $this->db->query($consulta);
-        if(!$resultado){
+        */
+        $resultado = $this->db->prepare("INSERT INTO $this->nombre_tabla (usu_id, cat_id, art_titulo, art_resumen, art_detalle, art_foto) VALUES (?,?,?,?,?,?)");
+        $resultado->bind_param("iissss",$data['usu_id'],
+                                  $data['cat_id'],
+                                  $data['art_titulo'],
+                                  $data['art_resumen'],
+                                  $data['art_detalle'],
+                                  $data['art_foto']);
+        if(!$resultado->execute()){
             echo "Error al registrar los datos";
         }else{
             return $resultado; //Array 

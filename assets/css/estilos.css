@@ -8,18 +8,6 @@
     src: url(../fonts/Quicksand-VariableFont_wght.ttf);
 }
 
-body .form-login {
-    font-family: Quick;
-    margin: 0;
-    background-color: transparent;
-    background-image: url('/assets/img/bg_index.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
 h1,
 h2,
 h3,
@@ -32,7 +20,7 @@ h4 {
 a {
     color: #333;
     text-decoration: none;
-    transition: all 0.7s linear;
+    transition: all 0.5s linear;
 }
 
 input,
@@ -61,9 +49,19 @@ button,
 
 /*FORMULARIO LOGIN*/
 
+.login_page {
+    background-color: transparent;
+    background-image: url('../img/login-fondo1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .logo_login {
     width: 100%;
-    height: 280px;
+    height: 220px;
 }
 
 .form-login .etiqueta {
@@ -244,7 +242,7 @@ header .box_social {
 /* Listas */
 
 .contenedor_pie {
-    background-image: url(/img/login-fondo1.jpg);
+    background-image: url(../img/login-fondo1.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -337,4 +335,120 @@ header .box_social {
 .bg_negro {
     color: #fff;
     background-color: #333;
+}
+
+.contenedor_39 {
+    display: grid;
+    background-color: #eee;
+    grid-template-columns: 3fr 9fr;
+}
+
+.barra_lateral {
+    display: block;
+    background-color: #ccc;
+    min-height: 80vh;
+}
+
+.lista_barra h1 {
+    padding: 10px;
+    border-bottom: 1px solid #777;
+}
+
+.lista_barra ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista_barra li,
+.lista_barra a {
+    display: block;
+}
+
+.lista_barra a {
+    margin: 5px;
+    padding: 15px 5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-left: 4px solid #333;
+    background: rgba(90, 90, 90, .85);
+}
+
+.lista_barra a:hover {
+    border-left: 4px solid #555;
+    background-color: rgba(120, 120, 120, .8);
+}
+
+#btn_user {
+    display: block;
+    margin: 15px 5px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 30px;
+    position: relative;
+}
+
+#user_menu {
+    display: block;
+    background-color: rgba(0, 0, 0, .7);
+    border: 1px solid #111;
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    width: 20vw;
+    visibility: hidden;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+    border: 1px solid #777;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #777;
+    padding: 7px;
+}
+
+.contenedor_principal {
+    padding: 15px;
+}
+
+
+/*GRIDS DE FORMULARIOS*/
+
+.grid_1,
+.grid_3 {
+    display: grid;
+    gap: 10px;
+}
+
+.grid_1 {
+    grid-template-columns: 1fr;
+}
+
+.grid_3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+form label {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    /*display: block;*/
+}
+
+.form_item {
+    display: grid;
+    grid-template-columns: 1fr;
 }

@@ -13,6 +13,20 @@ class Usuario extends Modelo {
         $this->nombre_tabla = 'usuario';
     }
 
+    /* Para loguearse */
+    public function get_por_usuario($user){
+        $consulta = "SELECT * FROM $this->nombre_tabla WHERE usu_usr = '".$user."'";
+        $resultado = $this->db->query($consulta);
+        if(!$resultado){
+           return null;
+        }else{
+            return $resultado->fetch_assoc(); //Array 
+            $resultado->close();
+            $this->db->close();
+        }
+    }
+
+
     public function get_all(){
         $consulta = "SELECT * FROM $this->nombre_tabla";
         $resultado = $this->db->query($consulta);

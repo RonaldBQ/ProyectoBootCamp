@@ -1,6 +1,6 @@
 <?php
 
-require_once('config.php');
+require_once('../config.php');
 
 class Modelo{
     protected $db;
@@ -11,7 +11,7 @@ class Modelo{
         if($this->db->connect_errno){
             echo "Error de conexion  a la base de datos";
         }else{
-            echo "Conexion correcta de la base de datos";
+            /*echo "Conexion correcta de la base de datos";*/
         }   
     }
 }
